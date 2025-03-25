@@ -120,7 +120,7 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="section-padding bg-gray-50">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div 
           ref={headingRef}
           className="text-center mb-12 transition-all duration-700 opacity-0 translate-y-10"
@@ -133,7 +133,7 @@ const FAQ = () => {
           </p>
         </div>
         
-        <div className="bg-white rounded-xl p-6 shadow-sm">
+        <div className="bg-white rounded-xl p-8 shadow-sm">
           {faqs.map((faq, index) => (
             <FAQItem 
               key={index}
