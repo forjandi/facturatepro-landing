@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bluePurpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo con gradiente -->
+  <rect width="200" height="200" fill="url(#bluePurpleGradient)" rx="20" ry="20" />
+  
+  <!-- Letra F estilizada -->
+  <path d="M60 50 L60 150 M60 100 L120 100" 
+        stroke="white" 
+        stroke-width="22" 
+        fill="none" 
+        stroke-linecap="round"/>
+  
+  <!-- Letra P estilizada -->
+  <path d="M120 50 Q160 80, 160 100 T120 150" 
+        stroke="white" 
+        stroke-width="22" 
+        fill="none" 
+        stroke-linecap="round"/>
+</svg>
