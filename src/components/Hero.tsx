@@ -111,16 +111,22 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-30 animate-pulse-soft"></div>
             <div className="glass-card rounded-2xl p-1 relative">
-              <img
-                src="https://i.ibb.co/N6d06jN7/Clean-Shot-2025-03-25-at-14-10-36.png"
-                alt="Dashboard de facturación electrónica"
-                className="w-full h-auto rounded-xl shadow-sm object-cover"
-                onLoad={(e) => {
-                  e.currentTarget.classList.remove("loading");
-                  e.currentTarget.classList.add("loaded");
-                }}
-                loading="lazy"
-              />
+              <a
+                href="https://imgbb.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://i.ibb.co/YTFmbzTD/Clean-Shot-2025-03-25-at-14-29-12.png"
+                  alt="Dashboard de facturación electrónica"
+                  className="w-full h-auto rounded-xl shadow-sm object-cover"
+                  onLoad={(e) => {
+                    e.currentTarget.classList.remove("loading");
+                    e.currentTarget.classList.add("loaded");
+                  }}
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
 
