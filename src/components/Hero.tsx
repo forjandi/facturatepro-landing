@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
-import { MessageSquare, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -71,7 +71,10 @@ const Hero = () => {
               className="bg-white text-primary border border-primary/20 px-8 py-4 rounded-lg 
                         font-medium flex items-center justify-center gap-2 hover:bg-blue-50 transition-all"
             >
-              <MessageSquare className="h-4 w-4" />
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M3 21l1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path>
+                <path d="M14 11a3 3 0 1 1-2.83-2.83"></path>
+              </svg>
               Contactar ventas
             </a>
           </div>
