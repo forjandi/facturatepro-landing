@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-white">FacturasAmigas</h3>
+              <h3 className="text-2xl font-bold text-white">Facturate</h3>
               <p className="mt-2 text-gray-400">
                 Solución integral de facturación electrónica para empresas peruanas 
                 que buscan simplificar sus procesos contables y cumplir con las 
@@ -43,7 +43,7 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">Contacto</h4>
             <ul className="space-y-3 text-gray-400">
               <li>Lima, Perú</li>
-              <li>ventas@facturasamigas.pe</li>
+              <li>ventas@facturate.pe</li>
               <li>+51 958 051 400</li>
             </ul>
           </div>
@@ -51,7 +51,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} FacturasAmigas. Todos los derechos reservados.
+            © {new Date().getFullYear()} Facturate. Todos los derechos reservados.
           </p>
           
           <div className="mt-4 md:mt-0">
