@@ -43,5 +43,61 @@
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+      Chatbot.init({
+          chatflowid: "da1527ca-757b-461c-8851-ab70bacff9bd",
+          apiHost: "https://flowise-staging.forjandi.com",
+          theme: {
+          button: {
+            backgroundColor: "hsl(var(--primary))",
+            iconColor: "hsl(var(--background))",
+          },
+          chatWindow: {
+            welcomeMessage: "Hola! ¿Cómo puedo ayudarte?",
+            botMessage: {
+              textColor: "hsl(var(--foreground))",
+              backgroundColor: "hsl(var(--background))",
+            },
+            textInput: {
+              placeholder: "Escribe tu consulta",
+              sendButtonColor: "hsl(var(--primary))",
+              textColor: "hsl(var(--foreground))",
+              backgroundColor: "hsl(var(--background))",
+            },
+            backgroundColor: "hsl(var(--background)/0.8)",
+            footer: {
+              textColor: "hsl(var(--primary))",
+              text: "Powered by",
+              company: "Forjandi",
+              companyLink: "https://forjandi.com",
+            },
+            userMessage: {
+              backgroundColor: "hsl(var(--primary))",
+              textColor: "hsl(var(--background))",
+              showAvatar: false,
+            },
+          },
+          customCSS: `[part="bot"] {
+            --tw-backdrop-blur: blur(4px) !important;
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia) !important;
+            
+          }
+  
+          div.animate-fade-in span{
+            background-color:transparent !important;
+          }
+  
+          div.rounded-full {
+            background-color:hsl(var(--foreground)) !important;
+          }
+  
+          .chatbot-input{
+            border-color: hsl(var(--border)) !important;
+          }
+          `,
+        },
+      })
+    </script>
   </body>
 </html>
