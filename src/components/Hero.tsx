@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import dashboadImg from "../assets/dashboard.png";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -33,68 +33,60 @@ const Hero = () => {
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-100/50 rounded-full blur-3xl -z-10 animate-pulse-soft"></div>
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-blue-100/50 rounded-full blur-3xl -z-10 animate-pulse-soft"></div>
 
-      <div
-        ref={heroRef}
-        className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 transition-all duration-700 opacity-0 translate-y-10"
-      >
-        <div className="flex-1 space-y-8">
-          <div className="space-y-2">
-            <div className="bg-blue-50 text-primary inline-block px-3 py-1 rounded-full text-sm font-medium animate-fade-in">
+      <div ref={heroRef} className="transition-all duration-700 opacity-0 translate-y-10">
+        <div className="text-left md:text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            Simplifica tu{" "}
+            <span className="text-gradient">facturación electrónica</span> <br className="hidden md:inline-block"/>
+            con nosotros
+          </h1>
+          <div className="mt-7">
+            <span className="bg-blue-50 text-primary inline-block px-3 py-1 rounded-full text-sm font-medium animate-fade-in">
               Facturación Electrónica SUNAT
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Simplifica tu{" "}
-              <span className="text-gradient">facturación electrónica</span> con
-              nosotros
-            </h1>
+            </span>
+            <p className="text-gray-600 text-sm md:text-base mt-5 max-w-3xl mx-auto">
+              Automatiza tus procesos de facturación electrónica con SUNAT de manera sencilla, segura y eficiente. Ahorra tiempo y cumple con la normativa.
+            </p>
           </div>
-
-          <p className="text-gray-600 text-lg md:text-xl max-w-2xl">
-            Automatiza tus procesos de facturación electrónica con SUNAT de
-            manera sencilla, segura y eficiente. Ahorra tiempo y cumple con la
-            normativa.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-wrap flex-row gap-4 justify-center mt-10">
             <a
               href="#features"
-              className="bg-primary text-white px-8 py-4 rounded-full font-medium 
+              className="bg-primary text-white text-sm md:text-base px-4 md:px-8 py-2 rounded-full font-medium 
                         flex items-center justify-center gap-2 shadow-lg shadow-blue-200/50
                         hover:bg-primary/90 transition-all"
             >
               Conocer más
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="w-6 h-6 sm:w-4 sm:h-4" />
             </a>
 
             <a
               href="https://wa.me/51958051400?text=Hola,%20quisiera%20saber%20más%20sobre%20el%20sistema%20de%20facturación%20electrónica%20de%20Facturate%20Pro."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-primary border border-primary/20 px-8 py-4 rounded-full 
+              className="bg-white text-primary text-sm md:text-base border border-primary/20 px-4 md:px-8 py-2 rounded-full 
                         font-medium flex items-center justify-center gap-2 hover:bg-blue-50 transition-all"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
-                width="30"
-                height="30"
+                className="w-6 h-6 md:w-7 md:h-7"
                 viewBox="0,0,256,256"
               >
                 <g
                   fill="#6366f2"
-                  fill-rule="nonzero"
+                  fillRule="nonzero"
                   stroke="none"
-                  stroke-width="1"
-                  stroke-linecap="butt"
-                  stroke-linejoin="miter"
-                  stroke-miterlimit="10"
-                  stroke-dasharray=""
-                  stroke-dashoffset="0"
-                  font-family="none"
-                  font-weight="none"
-                  font-size="none"
-                  text-anchor="none"
+                  strokeWidth="1"
+                  strokeLinecap="butt"
+                  strokeLinejoin="miter"
+                  strokeMiterlimit="10"
+                  strokeDasharray=""
+                  strokeDashoffset="0"
+                  fontFamily="none"
+                  fontWeight="none"
+                  fontSize="none"
+                  textAnchor="none"
                   style={{ mixBlendMode: "normal" }}
                 >
                   <g transform="scale(8.53333,8.53333)">
@@ -105,32 +97,16 @@ const Hero = () => {
               Contactar a ventas
             </a>
           </div>
-        </div>
-
-        <div className="flex-1 relative">
-          <div className="relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-30 animate-pulse-soft"></div>
-            <div className="glass-card rounded-2xl p-1 relative">
-              <img
-                src="./hero-laptop.png"
-                alt="Dashboard de facturación electrónica"
-                className="w-full h-auto rounded-xl shadow-sm object-cover"
-                onLoad={(e) => {
-                  e.currentTarget.classList.remove("loading");
-                  e.currentTarget.classList.add("loaded");
-                }}
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div className="absolute -bottom-6 -right-6 bg-white shadow-lg rounded-lg p-4 w-32 md:w-48 animate-float">
-            <div className="flex items-center justify-between">
-              <div className="flex flex-col">
-                <span className="text-sm text-gray-500">Facturas Emitidas</span>
-                <span className="text-lg font-bold text-primary">
-                  100% Online
-                </span>
+          <div className="mt-16 max-w-3xl mx-auto relative">
+            <img alt="" src={dashboadImg} loading="lazy" className="w-full rounded-lg shadow-md" />
+            <div className="absolute -bottom-16 md:-bottom-6 -right-0 md:-right-6 lg:-right-8 bg-white shadow-lg rounded-lg py-4 px-6 animate-float">
+              <div className="flex items-center justify-between">
+                <div className="flex flex-col">
+                  <span className="text-xs md:text-sm text-gray-500">Facturas Emitidas</span>
+                  <span className="text-base md:text-lg font-bold text-primary">
+                    100% Online
+                  </span>
+                </div>
               </div>
             </div>
           </div>

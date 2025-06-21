@@ -139,3 +139,58 @@ img.loading {
 img.loaded {
   opacity: 1;
 }
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.solar-system {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 10s linear infinite;
+}
+
+.orbit.mercury { width: 200px; height: 200px; animation-duration: 7s; }
+.orbit.venus   { width: 290px; height: 290px; animation-duration: 10s; }
+.orbit.earth   { width: 380px; height: 380px; animation-duration: 15s; }
+.orbit.mars    { width: 470px; height: 470px; animation-duration: 20s; }
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.planet > div {
+  display: flex;
+  transition: transform linear;
+}
