@@ -52,7 +52,7 @@ const AboutSystem = () => {
                     </div>
                     <div className="col-span-1 sm:col-span-3 bg-white/80 rounded-md shadow-sm p-5">
                         <h3 className="text-xl font-semibold">Módulo de comprobantes</h3>
-                        <p className="text-gray-600 text-sm mt-2">Con nuestro sistema puede emitir facturas, boletas, notas de crédito, notas de débito y guías de remisión</p>
+                        <p className="text-gray-600 text-sm mt-2">Con nuestro sistema puede emitir facturas, boletas, notas de crédito, notas de débito y guías de remisión.</p>
                         <div className="h-64 p-5 bg-gray-100 rounded-md mt-5 flex items-center justify-center">
                             <img src={moduloComprobantes} alt="" className="w-full h-full object-cover object-left-top rounded-md"/>
                         </div>
@@ -66,13 +66,13 @@ const AboutSystem = () => {
                     </div>
                     <div className="col-span-1 sm:col-span-2 bg-white/80 rounded-md shadow-sm p-5">
                         <h3 className="text-xl font-semibold">Gráfico de ingresos</h3>
-                        <p className="text-gray-600 text-sm mt-2">Consulta tus ingresos de los últimos 30 días.</p>
+                        <p className="text-gray-600 text-sm mt-2">Consulta tus ingresos en un periodo de 30 días.</p>
                         <div className="h-64 p-5 bg-gray-100 rounded-md mt-5 flex items-center justify-center">
                             <img src={graphicsNotas} alt="" className="w-full h-full object-cover object-left-bottom rounded-md"/>
                         </div>
                     </div>
                 </div>
-                <IntegrationAPI/>
+                {/* <IntegrationAPI/> */}
             </div>
         </section>
     );

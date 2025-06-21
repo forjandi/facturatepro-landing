@@ -2,15 +2,16 @@ import React, { useEffect, useRef } from "react";
 import { Microchip, MonitorCog, Server, Smartphone, Printer   } from 'lucide-react';
 
 
-const planetConfigs = [
-    { name: "mercury", color: "indigo-400", duration: 7, icon: <MonitorCog className="size-6" /> },
-    { name: "venus", color: "cyan-400", duration: 10, icon: <Server className="size-6" /> },
-    { name: "earth", color: "green-400", duration: 15, icon: <Smartphone className="size-6" /> },
-    { name: "mars", color: "pink-400", duration: 20, icon: <Printer className="size-6" /> },
+const itemsConfigs = [
+    { name: "item-0", color: "indigo-400", icon: <MonitorCog className="size-6" /> },
+    { name: "item-1", color: "cyan-400", icon: <Server className="size-6" /> },
+    { name: "item-2", color: "green-400", icon: <Smartphone className="size-6" /> },
+    { name: "item-3", color: "pink-400", icon: <Printer className="size-6" /> },
 ];
+const ORBIT_DURATION = 15; // segundos
 
 const IntegrationAPI = () => {
-    const planetRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
     useEffect(() => {
         let animationFrame: number;
@@ -18,10 +19,12 @@ const IntegrationAPI = () => {
 
         function animate(now: number) {
             const elapsed = (now - start) / 1000;
-            planetConfigs.forEach((planet, i) => {
-                const angle = ((elapsed / planet.duration) * 360) % 360;
-                if (planetRefs.current[i]) {
-                    planetRefs.current[i]!.style.setProperty("--orbit-rotation", `${angle}deg`);
+            itemsConfigs.forEach((planet, i) => {
+                const baseAngle = ((elapsed / ORBIT_DURATION) * 360) % 360;
+                const separation = 360 / itemsConfigs.length;
+                const angle = baseAngle + i * separation;
+                if (itemRefs.current[i]) {
+                    itemRefs.current[i]!.style.setProperty("--orbit-rotation", `${angle}deg`);
                 }
             });
             animationFrame = requestAnimationFrame(animate);
@@ -48,28 +51,30 @@ const IntegrationAPI = () => {
             </div>
             <div className="flex items-center justify-center h-96 relative mt-10">
                 <div className="absolute w-96 h-96 bg-gradient-to-r from-cyan-200 to-pink-400 rounded-full blur-3xl -z-10 animate-pulse-soft"></div>
-                <div className="solar-system body">
-                    <div className="sun flex items-center justify-center text-gray-700 w-20 h-20 rounded-sm bg-white/30 backdrop-blur-md border-4 border-white/30 shadow-md ">
+                <div className="container-api">
+                    <div className="central-api flex items-center justify-center text-gray-700 w-20 h-20 rounded-sm bg-white/30 backdrop-blur-md border-4 border-white/30 shadow-md ">
                         <Microchip className="size-12 " />
                     </div>
-                    {planetConfigs.map((planet, i) => (
-                        <div className={`orbit ${planet.name}`} key={planet.name}>
+                    <div className="orbit orbit-1"></div>
+                    <div className="orbit orbit-2"></div>
+                    <div className="orbit main">
+                        {itemsConfigs.map((item, i) => (
                             <div
-                                className={`planet ${planet.name} flex items-center justify-center relative`}
-                                ref={el => (planetRefs.current[i] = el)}
-                                style={{ "--orbit-rotation": undefined } as React.CSSProperties}
+                                className={`item-api ${item.name} flex items-center justify-center relative`}
+                                key={item.name}
+                                ref={el => (itemRefs.current[i] = el)}
                             >
                                 <div
-                                    className={`w-12 h-12 flex items-center justify-center rounded-sm  backdrop-blur-md border-2 border-white/40 shadow-md text-${planet.color} bg-${planet.color}/80`}
+                                    className={`w-12 h-12 flex items-center justify-center rounded-sm  backdrop-blur-md border-2 border-white/40 shadow-md text-${item.color} bg-${item.color}/80`}
                                     style={{
                                         transform: `rotate(calc(-1 * var(--orbit-rotation, 0deg)))`
                                     }}
                                 >
-                                    {planet.icon}
+                                    {item.icon}
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

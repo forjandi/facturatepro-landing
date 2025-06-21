@@ -11,6 +11,10 @@
 - **Integración de Sistemas:** Se integra fácilmente con sistemas de inventario, ventas y contabilidad, facilitando el intercambio y sincronización de datos empresariales.
 - **Eficiencia Operativa:** Reduce errores humanos, disminuye costos administrativos y libera tiempo del personal contable, optimizando la gestión empresarial.
 - **Almacenamiento Seguro:** Cumple con las exigencias de almacenamiento digital de comprobantes, garantizando la seguridad y disponibilidad de la información.
+- **Consulta Ruc Simple:** Consulta datos de empresas por RUC.
+- **Consulta Dni:** Consulta datos de personas por DNI.
+- **Reintentos:** Permite reintentar el envío de boletas y facturas a SUNAT, asegurando registrar el documento ante fallas de SUNAT.
+
 
 ## Modulos del sistema:
 - **Reportes:**
@@ -33,26 +37,6 @@
 - **Empresas:**
     - En este modulo se pueden registrar los datos de la empresa como: RUC, nombre, direccion, y los datos de la conexion a la SUNAT como: Usuario Sol secundario ( Para emitir los 4 tipos de documentos mencionados), Client ID y SECRET ( Para emitir Guias de Remision) y el certificado PEM.
     - Ademas se puede generar el API TOKEN
-
-## Servicios del sistema
-### Consulta de Documentos
-- **Servicio para consultar RUC y DNI**:
-  - Consulta Ruc Simple: Consulta datos de empresas por RUC
-  - Consulta Dni: Consulta datos de personas por DNI 
-
-### Sunat - Facturación Electrónica
-- **Servicio principal para la generación de comprobantes electrónicos**:
-  - Emisión de facturas, boletas, notas de crédito y débito
-  - Integración con SUNAT
-  - Generación de XML y PDF de comprobantes
-
-- **Servicio para anulaciones de comprobantes**:
-  - Comunicación de bajas a SUNAT
-  - Procesamiento de anulaciones masivas
-
-- **Servicio para resúmenes diarios**:
-  - Generación de resúmenes de boletas
-  - Envío de resúmenes a SUNAT
 
 ### Servicios internos
 - **Modelo para notas de venta**:
