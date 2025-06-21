@@ -139,3 +139,67 @@ img.loading {
 img.loaded {
   opacity: 1;
 }
+
+.container-api {
+  --orbit-size: 400px;
+  --planet-size: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: var(--orbit-size);
+  height: var(--orbit-size);
+  position: relative;
+}
+
+.central-api {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;  
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit.orbit-1 {
+  width: 150px;
+  height: 150px;
+}
+
+.orbit.orbit-2 {
+  width: 250px;
+  height: 250px;
+}
+
+.orbit.main {
+  width: var(--orbit-size);
+  height: var(--orbit-size);  
+  animation: rotate 15s linear infinite;
+}
+
+.item-api {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--orbit-rotation, 0deg))
+    translateX(calc((var(--orbit-size) / 2) - (var(--planet-size) / 2)));
+}
+
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.item-api > div {
+  display: flex;
+  transition: transform linear;
+}

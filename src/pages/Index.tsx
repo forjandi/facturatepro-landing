@@ -6,6 +6,7 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
+import AboutSystem from '@/components/AboutSystem';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,6 +26,7 @@ const Index = () => {
       <main>
         <Hero />
         <WhyChooseUs />
+        <AboutSystem />
         <Testimonials />
         <FAQ />
       </main>

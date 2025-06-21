@@ -28,7 +28,7 @@ const Navbar = () => {
             alt="Facturate Pro Logo"
             className="w-8 h-8"
           />
-          <span className="text-2xl font-bold text-gradient">
+          <span className="text-lg md:text-2xl font-bold text-gradient">
             Facturate Pro
           </span>
         </div>
@@ -58,15 +58,14 @@ const Navbar = () => {
           href="https://wa.me/51958051400?text=Hola,%20quisiera%20saber%20más%20sobre%20el%20sistema%20de%20facturación%20electrónica%20de%20Facturate%20Pro."
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full 
+          className="flex items-center gap-1 bg-primary text-white text-xs md:text-base px-4 md:px-8 py-2 rounded-full 
                     hover:bg-primary/90 transition-all shadow-md hover:shadow-lg"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
-            width="30"
-            height="30"
+            className="w-5 h-5 md:w-7 md:h-7"
             viewBox="0,0,256,256"
           >
             <g

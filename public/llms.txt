@@ -11,6 +11,36 @@
 - **Integración de Sistemas:** Se integra fácilmente con sistemas de inventario, ventas y contabilidad, facilitando el intercambio y sincronización de datos empresariales.
 - **Eficiencia Operativa:** Reduce errores humanos, disminuye costos administrativos y libera tiempo del personal contable, optimizando la gestión empresarial.
 - **Almacenamiento Seguro:** Cumple con las exigencias de almacenamiento digital de comprobantes, garantizando la seguridad y disponibilidad de la información.
+- **Consulta Ruc Simple:** Consulta datos de empresas por RUC.
+- **Consulta Dni:** Consulta datos de personas por DNI.
+- **Reintentos:** Permite reintentar el envío de boletas y facturas a SUNAT, asegurando registrar el documento ante fallas de SUNAT.
+
+
+## Modulos del sistema:
+- **Reportes:**
+    - Gráficos de totales de ingresos por notas de venta.
+    - Gráficos de totales de ingresos por comprobantes.
+- **Comprobantes:**
+    - Emisión y Listado de Boletas, Facturas, Notas de Creditos, Notas de Debido.
+- **Notas de ventas:**
+    - Es un comprobante simple sin validez legal para llevar cuenta de la compra sin notificar a la SUNAT, una vez creado este se puede convertir a una boleta o factura para que ya no sea necesario volver a crear el otro documento desde cero. En este modulo se pueden crear y ver las notas de venta.
+- **Anulaciones:**
+    - En este modulo se pueden visualizar las anulaciones que se han hecho a boletas o facturas.
+- **Clientes:**
+    - Modulo para registrar a los clientes, empresas mediante un rúculas o personas con DNI.
+- **Productos:**
+    - Modulo para registrar a los productos y llegar control de STOCK, puedes registrar su stock y configurar alertas mediante correo electrónico para que notifique cuando un producto esta por agotarse.
+- **Usuarios:**
+    - Modulo para registrar a los clientes, si es una empresa se registra por RUC y si es personal natural se registra por DNI.
+- **Sucursales:**
+    - Se pueden listar las sucursales y crear una nueva, por defecto siempre existe la sucursal "PRINCIPAL". En cada sucursal se pueden crear y editar las SERIES y correlativos de los documentos: Factura, Boleta, Nota de Crédito, Nota de Débito y Guía de Remisión.
+- **Empresas:**
+    - En este modulo se pueden registrar los datos de la empresa como: RUC, nombre, direccion, y los datos de la conexion a la SUNAT como: Usuario Sol secundario ( Para emitir los 4 tipos de documentos mencionados), Client ID y SECRET ( Para emitir Guias de Remision) y el certificado PEM.
+    - Ademas se puede generar el API TOKEN
+
+### Servicios internos
+- **Modelo para notas de venta**:
+  - Estructura de datos para notas de venta internas
 
 ## Beneficios para tu Empresa
 
