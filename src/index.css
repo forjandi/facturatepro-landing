@@ -141,8 +141,8 @@ img.loaded {
 }
 
 .container-api {
-  --orbit-size: 400px;
-  --planet-move: 10px;
+  --orbit-size: clamp(200px, 50vw, 400px);
+  --planet-move: clamp(32px, 7vw, 56px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,7 +200,11 @@ img.loaded {
 }
 
 .item-api > div {
+  width: var(--planet-move);
+  height: var(--planet-move);
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .orbit.main .item-api:nth-child(1) {
@@ -256,4 +260,12 @@ img.loaded {
 @keyframes orbit-icon-reverse-270 {
   from { transform: rotate(-270deg); }
   to   { transform: rotate(-630deg); }
+}
+@media (max-width: 600px) {
+  .container-api {
+    --planet-size: 12vw;
+  }
+  .orbit.orbit-2 {
+    display: none;
+  }
 }
