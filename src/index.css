@@ -142,7 +142,7 @@ img.loaded {
 
 .container-api {
   --orbit-size: 400px;
-  --planet-size: 48px;
+  --planet-move: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,7 +191,7 @@ img.loaded {
   transform:
     translate(-50%, -50%)
     rotate(var(--orbit-rotation, 0deg))
-    translateX(calc((var(--orbit-size) / 2) - (var(--planet-size) / 2)));
+    translateX(calc((var(--orbit-size) / 2) - (var(--planet-move) / 2)));
 }
 
 @keyframes rotate {
@@ -201,5 +201,59 @@ img.loaded {
 
 .item-api > div {
   display: flex;
-  transition: transform linear;
+}
+
+.orbit.main .item-api:nth-child(1) {
+  transform:
+    translate(-50%, -50%)
+    rotate(0deg)
+    translateX(calc((var(--orbit-size) / 2) - (var(--planet-move) / 2)));
+}
+.orbit.main .item-api:nth-child(2) {
+  transform:
+    translate(-50%, -50%)
+    rotate(90deg)
+    translateX(calc((var(--orbit-size) / 2) - (var(--planet-move) / 2)));
+}
+.orbit.main .item-api:nth-child(3) {
+  transform:
+    translate(-50%, -50%)
+    rotate(180deg)
+    translateX(calc((var(--orbit-size) / 2) - (var(--planet-move) / 2)));
+}
+.orbit.main .item-api:nth-child(4) {
+  transform:
+    translate(-50%, -50%)
+    rotate(270deg)
+    translateX(calc((var(--orbit-size) / 2) - (var(--planet-move) / 2)));
+}
+
+.orbit.main .item-api:nth-child(1) > div {
+  animation: orbit-icon-reverse-0 15s linear infinite;
+}
+.orbit.main .item-api:nth-child(2) > div {
+  animation: orbit-icon-reverse-90 15s linear infinite;
+}
+.orbit.main .item-api:nth-child(3) > div {
+  animation: orbit-icon-reverse-180 15s linear infinite;
+}
+.orbit.main .item-api:nth-child(4) > div {
+  animation: orbit-icon-reverse-270 15s linear infinite;
+}
+
+@keyframes orbit-icon-reverse-0 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+@keyframes orbit-icon-reverse-90 {
+  from { transform: rotate(-90deg); }
+  to   { transform: rotate(-450deg); }
+}
+@keyframes orbit-icon-reverse-180 {
+  from { transform: rotate(-180deg); }
+  to   { transform: rotate(-540deg); }
+}
+@keyframes orbit-icon-reverse-270 {
+  from { transform: rotate(-270deg); }
+  to   { transform: rotate(-630deg); }
 }

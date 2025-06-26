@@ -72,7 +72,7 @@ const AboutSystem = () => {
                         </div>
                     </div>
                 </div>
-                {/* <IntegrationAPI/> */}
+                <IntegrationAPI/>
             </div>
         </section>
     );
