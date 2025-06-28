@@ -1,4 +1,5 @@
 import { Microchip, MonitorCog, Server, Smartphone, Printer } from 'lucide-react';
+import './integrationAPI.css'
 
 const itemsConfigs = [
     { name: "item-0", color: "text-indigo-700 bg-indigo-400/10", icon: <MonitorCog className="w-[60%] h-[60%] size-6" /> },
@@ -19,8 +20,17 @@ const IntegrationAPI = () => {
                 <h3>
                     <span className="text-xl md:text-3xl font-bold">Módulo de integración (API)</span>
                 </h3>
-                <p className="text-gray-600 text-sm mt-5">
-                    Mejora la interoperabilidad de tu aplicación con nuestro sistema de facturación mediante el uso de tokens API. Estos tokens permiten a servicios de terceros autenticarse con nuestra aplicación en su nombre, facilitando la integración y el acceso a funcionalidades específicas.
+                <p className='text-sm mt-2 text-indigo-600'><strong>*Funcionalidad esta incluída en tu sucripción*</strong></p>
+                <p className="text-gray-600 text-sm mt-5 text-left">
+                    Integra tu sistema fácilmente con nuestra API de facturación y automatiza la <strong>emisión, consulta y gestión de comprobantes electrónicos.</strong> Nuestra API utiliza autenticación basada en tokens seguros, permitiendo que aplicaciones de terceros accedan a funcionalidades clave como la emisión de facturas y descarga de documentos.
+                    <br /><br />
+                    <span className="w-full font-bold text-gray-700 text-left inline-block">¿Por qué elegir nuestra API?</span>
+                    <ul className="list-disc list-inside mt-2 text-gray-700 text-xs md:text-sm text-left">
+                        <li><a href="https://facturate.pro/documentacion" target='_blank' className='underline text-sky-600'>Documentación</a> clara y ejemplos listos para usar.</li>
+                        <li>Permite anular comprobantes emitidos.</li>
+                        <li>Soporte para integración en múltiples lenguajes y plataformas.</li>
+                        <li>Actualizaciones y mejoras continuas.</li>
+                    </ul>
                 </p>
             </div>
             <div className="flex items-center justify-center h-auto md:h-96 relative mt-0 md:mt-10">
@@ -34,7 +44,8 @@ const IntegrationAPI = () => {
                     <div className="orbit main">
                         {itemsConfigs.map((item, i) => (
                             <div
-                                className={`item-api ${item.name} flex items-center justify-center relative`}
+                                id={`item-api-${i}`}
+                                className={`item-api ${item.name} flex items-center justify-center`}
                                 key={item.name}
                             >
                                 <div

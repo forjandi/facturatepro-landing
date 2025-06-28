@@ -11,6 +11,14 @@
 - **Integración de Sistemas:** Se integra fácilmente con sistemas de inventario, ventas y contabilidad, facilitando el intercambio y sincronización de datos empresariales.
 - **Eficiencia Operativa:** Reduce errores humanos, disminuye costos administrativos y libera tiempo del personal contable, optimizando la gestión empresarial.
 - **Almacenamiento Seguro:** Cumple con las exigencias de almacenamiento digital de comprobantes, garantizando la seguridad y disponibilidad de la información.
+- **API de Facturación:** Ofrece una API RESTful que permite a desarrolladores la integración con sistemas externos de manera segura y eficiente, contamos con documentación clara para usar.
+
+### ¿Qué puedes hacer con la API de FacturatePro?
+
+- Emitir facturas, boletas y notas de crédito electrónicas desde tu propio sistema.
+- Permite anular comprobantes emitidos.
+- Descargar comprobantes en formato PDF y XML.
+- Integrar la facturación electrónica con tus sistemas de ventas, ERP o e-commerce.
 
 ## Beneficios para tu Empresa
 
