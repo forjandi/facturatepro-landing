@@ -32,7 +32,7 @@ const itemsConfigs = [
 
 const IntegrationAPI = () => {
   return (
-    <div className="max-w-7xl mx-auto relative mt-20">
+    <div className="max-w-7xl mx-auto relative mt-32">
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-200/70 rounded-full blur-3xl -z-10 animate-pulse-soft"></div>
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-blue-200/70 rounded-full blur-3xl -z-10 animate-pulse-soft"></div>
       <div className="text-center max-w-3xl mx-auto mb-16 md:mb-32 flex flex-col items-center">
