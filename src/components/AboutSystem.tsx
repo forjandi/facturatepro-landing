@@ -3,7 +3,7 @@ import graphicsComprobantes from "../assets/graphics-comprobantes.png";
 import graphicsNotas from "../assets/graphics-notas.png";
 import moduloComprobantes from "../assets/module-comprobantes.png";
 import moduloApi from "../assets/module-api.png";
-import IntegrationAPI from "./IntegrationAPI";
+import IntegrationAPI from "./IntegrationAPI/IntegrationAPI";
 
 const AboutSystem = () => {
 
@@ -72,7 +72,7 @@ const AboutSystem = () => {
                         </div>
                     </div>
                 </div>
-                {/* <IntegrationAPI/> */}
+                <IntegrationAPI/>
             </div>
         </section>
     );
