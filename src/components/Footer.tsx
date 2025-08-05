@@ -16,7 +16,7 @@ const Footer = () => {
             </div>
 
             <a
-              href="https://wa.me/51958051400?text=Hola,%20quisiera%20saber%20más%20sobre%20el%20sistema%20de%20facturación%20electrónica%20de%20Facturate%20Pro."
+              href="https://wa.me/51925630027?text=Hola,%20quisiera%20saber%20más%20sobre%20el%20sistema%20de%20facturación%20electrónica%20de%20Facturate%20Pro."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-primary/90 hover:bg-primary text-white 
